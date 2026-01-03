@@ -46,7 +46,7 @@ Each table is connected through primary and foreign keys to enable relational an
 ## Business Questions Answered
 
 ### Data Quality & Validation
-- Are there missing or invalid orders, payments, or products?
+- Are there any marked as delivered but are missing?
 - How many orders were canceled or unavailable?
 - Are there orders without associated items or customers?
 
