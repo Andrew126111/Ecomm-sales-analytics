@@ -86,5 +86,28 @@ Each table is connected through primary and foreign keys to enable relational an
 
 ---
 
-## Project Structure
+
+---
+
+## Key Skills Demonstrated
+- Relational database design
+- Complex SQL joins across multiple tables
+- Aggregations and window functions
+- Business-focused analytical thinking
+- Data quality validation
+- Translating data into actionable insights
+
+---
+
+## Notes
+This project focuses on **SQL-based analysis** rather than visualization or dashboards.  
+The emphasis is on **query clarity, correctness, and business relevance**, mirroring real-world analytics workflows.
+
+---
+
+## Future Improvements
+- Add visualizations using Python or BI tools
+- Build a FastAPI backend to expose analytics endpoints
+- Optimize queries with indexing and query plans
+- Extend analysis to customer segmentation models
 
