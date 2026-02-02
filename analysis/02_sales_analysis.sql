@@ -19,14 +19,18 @@ WHERE orders.order_status = 'delivered';
 SELECT DATE_TRUNC('month', order_purchase_timestamp),SUM(order_items.price) AS Monthly_revenue
 FROM order_items
 LEFT JOIN orders ON orders.order_id = order_items.order_id
-GROUP BY orders.order_purchase_timestamp;
+WHERE orders.order_status = 'delivered'
+GROUP BY DATE_TRUNC('month', order_purchase_timestamp);
 -- Insights:
 -- Implications:
 
 --Question 3
 -- How much does the average customer spend per order?
-SELECT SUM(order_items.price)/SUM(order_items.order_item_id) AS AOV
-FROM order_items;
+SELECT SUM(order_items.price) / COUNT(DISTINCT order_items.order_id) AS AOV
+FROM order_items
+JOIN orders ON orders.order_id = order_items.order_id
+WHERE orders.order_status = 'delivered';
+
 --Insights:
 --Implications:
 -- revenue / number of distinct orders
